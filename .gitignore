@@ -1,1 +1,21 @@
 *.env
+# --- Rust / Cargo ---
+# Folder target berisi semua hasil kompilasi (binary, build artifacts). 
+# Folder ini bisa sangat besar, jadi WAJIB di-ignore.
+*/target/*
+
+# --- Lock files ---
+# Untuk library (Crates), Cargo.lock tidak perlu di-commit.
+# Tapi untuk executable/project aplikasi, Cargo.lock HARUS di-commit.
+# Jika kamu bikin aplikasi (bukan library), hapus baris di bawah ini:
+# Cargo.lock
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Misc ---
+# File backup atau temporary yang dihasilkan Cargo
+**/*.rs.bk
